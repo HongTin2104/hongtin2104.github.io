@@ -84,13 +84,6 @@ const Sidebar = (props) => {
   const { children } = props;
   const { pathname } = globalHistory.location;
   let domContent = <DomContent />;
-  if (width > 997) {
-    domContent = (
-      <Affix offsetTop={0}>
-        <DomContent />
-      </Affix>
-    );
-  }
   if (width < 768) {
     domContent = <></>;
     if (pathname === '/') {
@@ -102,10 +95,10 @@ const Sidebar = (props) => {
       <Layout>
         <Content className={`${style.content} ${style.background}`}>
           <Row>
-            <Col sm={24} md={9} lg={6} className={`${style.sidebarContent} animate-fade-in-up`} style={{ position: 'sticky', top: '20px', height: 'fit-content' }}>
+            <Col sm={24} md={9} lg={6} className={`${style.sidebarContent} animate-fade-in-up`} style={{ position: 'sticky', top: '5.35rem', height: 'fit-content' }}>
               {domContent}
             </Col>
-            <Col sm={24} md={15} lg={18} className={style.mainContent}>
+            <Col sm={24} md={15} lg={18} className={style.mainContent} style={{ position: 'sticky', top: '5.35rem', height: 'fit-content' }}>
               <Layout className={`${style.background} ${style.boxContent} borderRadiusSection`}>
                 {children}
               </Layout>
