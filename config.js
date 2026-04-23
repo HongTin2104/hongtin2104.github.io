@@ -1,6 +1,6 @@
 module.exports = {
   pathPrefix: '',
-  siteUrl: 'https://hongtin2104.github.io/hongtin.github.io',
+  siteUrl: 'https://hongtin.github.io',
   siteTitle: 'Nguyễn Hồng Tín',
   siteDescription: 'Personal website of Nguyễn Hồng Tín',
   author: 'Nguyễn Hồng Tín',
@@ -19,7 +19,7 @@ module.exports = {
     facebook: 'https://www.facebook.com/nguyentin2104',
     twitter: '',
     instagram: '',
-    globe: 'https://hongtin2104.github.io/NguyenTin.github.io/',
+    globe: 'https://hongtin.github.io',
     rss: '/rss.xml',
     tiktok: '',
     linkedin: 'https://www.linkedin.com/in/tin-hong-nguyen-0b442029b/',

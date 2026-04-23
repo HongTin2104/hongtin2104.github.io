@@ -7,7 +7,7 @@ Experienced in feature delivery, system optimization, and AI-integrated solution
 
 ## Live
 
-- Portfolio: https://hongtin2104.github.io/NguyenTin.github.io/
+- Portfolio: https://hongtin.github.io
 
 ## Connect
 
