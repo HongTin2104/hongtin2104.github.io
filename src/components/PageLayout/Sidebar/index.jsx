@@ -79,7 +79,7 @@ const DomContent = () => (
         <li className={`${style.contactBlockItem}`}>
           <span><FeatherIcon size="19" icon="map-pin" /></span>
           {' '}
-          &nbsp; &nbsp; Can Tho, Viet Nam
+          &nbsp; &nbsp; Ho Chi Minh City, Viet Nam
         </li>
         <li className={`${style.contactBlockItem}`}>
           <span><FeatherIcon size="19" icon="mail" /></span>
