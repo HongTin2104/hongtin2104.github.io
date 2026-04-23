@@ -10,7 +10,7 @@ module.exports = {
   pathPrefix,
   siteUrl,
   siteTitle: 'Nguyễn Hồng Tín',
-  siteDescription: 'Nguyễn Hồng Tín — Backend Developer & AI Engineer from Ho Chi Minh City. Specializing in Python, FastAPI, LangChain, LLM, and RAG systems. Building reliable APIs and AI-powered products.',
+  siteDescription: 'Nguyễn Hồng Tín - Backend Developer & AI Engineer from Ho Chi Minh City. Specializing in Python, FastAPI, LangChain, LLM, and RAG systems. Building reliable APIs and AI-powered products.',
   author: 'Nguyễn Hồng Tín',
   profileImage: '/hongtin2104.png',
   titleTemplate: 'Nguyễn Hồng Tín | Backend Developer & AI Engineer',

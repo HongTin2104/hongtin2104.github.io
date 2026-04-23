@@ -5,8 +5,8 @@ import SEO from '../../Seo';
 
 const pageText = {
   paraOne:
-    'I am Nguyễn Hồng Tín, a backend developer with 2+ years of experience building reliable and scalable APIs for web applications using Python and FastAPI.',
-  paraTwo: 'I have hands-on experience delivering product features, optimizing performance, and integrating third-party services. I also build AI-integrated systems with LLMs and LangChain for practical business use cases.',
+    'I am Nguyễn Hồng Tín, a Backend Developer & AI Engineer dedicated to building robust server-side architectures and intelligent systems. I specialize in engineering high-performance backend platforms and integrating advanced artificial intelligence to solve real-world business challenges.',
+  paraTwo: 'With a strong focus on system reliability and scalability, I deliver robust APIs and optimize backend operations. I am driven by continuous learning, always exploring emerging technologies to bring modern, efficient, and innovative solutions to life.',
 };
 
 const AboutMe = () => {
