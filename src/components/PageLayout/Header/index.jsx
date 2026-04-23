@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <div style={{ background: '#ff8100' }}>
+    <div style={{ background: 'transparent' }}>
       <div
         className={style.circleMenu}
         role="button"

@@ -28,36 +28,6 @@ module.exports = [
     },
   },
   {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      name: 'markdown-pages',
-      path: `${__dirname}/content`,
-    },
-  },
-  {
-    resolve: 'gatsby-transformer-remark',
-    options: {
-      plugins: [
-        {
-          resolve: 'gatsby-remark-images',
-          options: {
-            maxWidth: 1000,
-            quality: 80,
-            showCaptions: true,
-            linkImagesToOriginal: false,
-          },
-        },
-        {
-          resolve: 'gatsby-remark-external-links',
-          options: {
-            rel: 'nofollow',
-          },
-        },
-        'gatsby-remark-prismjs',
-      ],
-    },
-  },
-  {
     resolve: 'gatsby-plugin-i18n',
     options: {
       langKeyDefault: config.defaultLanguage,

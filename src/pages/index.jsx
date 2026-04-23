@@ -9,12 +9,7 @@ import Experience from '../components/PageFragments/HomePage/Experience';
 
 export default () => (
   <Layout className="outerPadding">
-    <Layout
-      className="container"
-      style={{
-        background: '#fff5f8',
-      }}
-    >
+    <Layout className="container">
       <Header />
       <SidebarWrapper>
         <div id="HongTin2104">
