@@ -16,7 +16,7 @@ export default function Resume() {
         <Header />
         <SidebarWrapper>
           <div className="marginTopTitle">
-            <h1 className="titleSeparate">Resume</h1>
+            <h1 className="titleSeparate">Resume of Nguyễn Hồng Tín</h1>
           </div>
           <div className="resumeSection">
             <iframe

@@ -59,6 +59,11 @@ function SEO({
           alternateName: 'Nguyen Hong Tin',
           url: Config.siteUrl,
           jobTitle: 'Backend Developer',
+          gender: 'Male',
+          nationality: {
+            '@type': 'Country',
+            name: 'Vietnam',
+          },
           image: profileImageUrl,
           sameAs: [
             Config.social.github,

@@ -80,6 +80,9 @@ const DomContent = () => (
           </a>
         </li>
       </ul>
+      <div className={style.copyright} style={{ textAlign: 'center', marginTop: '20px', fontSize: '0.85rem', color: '#888' }}>
+        © {new Date().getFullYear()} Nguyễn Hồng Tín
+      </div>
     </div>
   </aside>
 );
