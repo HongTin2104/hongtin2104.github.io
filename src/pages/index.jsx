@@ -8,7 +8,7 @@ import SkillsProgress from '../components/PageFragments/HomePage/SkillProgress';
 import Experience from '../components/PageFragments/HomePage/Experience';
 
 export default () => (
-  <Layout className="outerPadding">
+  <Layout className="outerPadding full-height-layout">
     <Layout
       className="container"
       style={{

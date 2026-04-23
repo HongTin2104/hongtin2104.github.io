@@ -6,7 +6,7 @@ import ContactForm from '../../components/PageFragments/ContactForm';
 import SEO from '../../components/Seo';
 
 const Contact = () => (
-  <Layout className="outerPadding">
+  <Layout className="outerPadding full-height-layout">
     <Layout className="container">
       <SEO
         title="Contact"

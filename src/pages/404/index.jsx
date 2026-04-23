@@ -19,7 +19,7 @@ export const query = graphql`
 `;
 
 export default ({ data }) => (
-  <Layout className="outerPadding">
+  <Layout className="outerPadding full-height-layout">
     <Layout className="container">
       <Header />
       <Sidebar404>

@@ -6,7 +6,7 @@ import SEO from '../components/Seo';
 
 export default function Resume() {
   return (
-    <Layout className="outerPadding">
+    <Layout className="outerPadding full-height-layout">
       <Layout className="container">
         <SEO
           title="Resume"

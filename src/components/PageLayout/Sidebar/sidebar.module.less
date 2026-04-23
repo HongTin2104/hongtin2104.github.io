@@ -1,13 +1,47 @@
 @import (reference) '../../../styles/index.less';
+
+.sidebarLayout {
+    background: transparent;
+    @media screen and (min-width: 769px) {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .content{
     border-radius: @border-radius-content;
     margin: 0px;
-    min-height: 280px
+    min-height: 280px;
+    @media screen and (min-width: 769px) {
+        flex: 1;
+        display: flex;
+        overflow: hidden;
+    }
 }
 
 .mainContent{
     background: #fde7ee;
     border-radius: @border-radius-full;
+    @media screen and (min-width: 769px) {
+        height: calc(100vh - 1.87rem * 2 - 4.35rem - 20px);
+        overflow-y: auto;
+        
+        /* Custom Scrollbar for a more professional look */
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #f6a9bf;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: #f48fb1;
+        }
+    }
 }
 
 .sidebarContent{

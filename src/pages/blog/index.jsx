@@ -9,7 +9,7 @@ import PostCard from '../../components/PostCard';
 import SEO from '../../components/Seo';
 
 const Blog = ({ data }) => (
-  <Layout className="outerPadding">
+  <Layout className="outerPadding full-height-layout">
     <Layout className="container">
       <Header />
       <SEO

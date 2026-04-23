@@ -25,7 +25,7 @@ const Post = ({ data }) => {
     path,
   );
   return (
-    <Layout className="outerPadding">
+    <Layout className="outerPadding full-height-layout">
       <Layout className="container">
         <SEO
           title={title}
