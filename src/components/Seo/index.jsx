@@ -146,6 +146,10 @@ function SEO({
                   name: 'robots',
                   content: 'index, follow',
                 },
+                {
+                  name: 'google-site-verification',
+                  content: Config.googleSiteVerification,
+                },
                 /* Open Graph */
                 {
                   property: 'og:title',

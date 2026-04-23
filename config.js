@@ -32,4 +32,5 @@ module.exports = {
   },
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT || 'https://getform.io/f/09a3066f-c638-40db-ad59-05e4ed71e451', // TODO
   googleAnalyticTrackingId: process.env.GA_TRACKING_ID || '',
+  googleSiteVerification: 'Si7xn2jh1JOQLb4DVIk7FSZjhF1t469cqp2sB5pW77M',
 };
