@@ -2,6 +2,8 @@
 
 .sidebarLayout {
     background: transparent;
+    border-radius: @border-radius-full;
+    overflow: hidden; /* Ensure content doesn't bleed out of rounded corners */
     @media screen and (min-width: 769px) {
         flex: 1;
         display: flex;
@@ -27,7 +29,7 @@
         height: calc(100vh - 1.87rem * 2 - 4.35rem - 20px);
         overflow-y: auto;
         
-        /* Custom Scrollbar for a more professional look */
+        /* Custom Scrollbar - Auto-hide behavior */
         &::-webkit-scrollbar {
             width: 6px;
         }
@@ -35,11 +37,17 @@
             background: transparent;
         }
         &::-webkit-scrollbar-thumb {
-            background: #f6a9bf;
+            background: transparent; /* Hide by default */
             border-radius: 10px;
         }
-        &::-webkit-scrollbar-thumb:hover {
-            background: #f48fb1;
+        
+        &:hover {
+            &::-webkit-scrollbar-thumb {
+                background: #f6a9bf; /* Show on hover */
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background: #f48fb1;
+            }
         }
     }
 }
