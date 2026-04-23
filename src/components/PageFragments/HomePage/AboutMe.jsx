@@ -15,21 +15,25 @@ const AboutMe = () => {
     <div style={{ lineHeight: '180%' }}>
       <div>
         <SEO
-          title="About"
+          title="Nguyễn Hồng Tín | Backend Developer & AI Engineer"
           description={description}
-          path=""
+          path="/"
           keywords={[
-            'Nguyen',
-            'Hồng Tín',
+            'Nguyễn Hồng Tín',
+            'Nguyen Hong Tin',
             'Backend developer',
             'FastAPI',
             'Python',
             'LangChain',
             'LLM',
             'RAG',
+            'AI Engineer',
           ]}
         />
-        <h1 className="titleSeparate">About Me</h1>
+        <h1 className="titleSeparate">Nguyễn Hồng Tín</h1>
+        <p style={{ fontSize: '1.2rem', fontWeight: '500', color: '#555', marginBottom: '20px' }}>
+          Backend Developer & AI Engineer specializing in Python & FastAPI
+        </p>
         <p>{pageText.paraOne}</p>
         {/* eslint-disable-next-line react/no-danger */}
         <p dangerouslySetInnerHTML={domHtml(pageText.paraTwo)} />

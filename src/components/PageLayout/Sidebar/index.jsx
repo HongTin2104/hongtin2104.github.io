@@ -19,7 +19,11 @@ const {
 
 const DomContent = () => (
   <aside>
-    <div className={`${style.profileAvatar} float-animation`} />
+    <div
+      className={`${style.profileAvatar} float-animation`}
+      title="Nguyễn Hồng Tín - Backend Developer"
+      aria-label="Nguyễn Hồng Tín Profile Picture"
+    />
     <div className={`${style.name} centerAlign`}>
       <div className={`${style.boxName} centerAlign`}>
         <h2>

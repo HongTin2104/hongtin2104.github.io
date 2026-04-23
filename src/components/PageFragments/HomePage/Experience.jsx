@@ -1,26 +1,10 @@
 import React from 'react';
 import { Col, Row } from 'antd';
 
-import SEO from '../../Seo';
-
 const Experience = () => (
   <div style={{ lineHeight: '180%' }}>
     <div>
-      <SEO
-        title="About"
-        path=""
-        keywords={[
-          'Nguyen',
-          'Hồng Tín',
-          'Backend developer',
-          'Python',
-          'FastAPI',
-          'LangChain',
-          'LLM',
-          'RAG',
-        ]}
-      />
-      <h1 className="titleSeparate">Work Experience</h1>
+      <h2 className="titleSeparate">Work Experience</h2>
       <p style={{ marginBottom: '1em' }}>
         <Row>
           <Col xs={24}>

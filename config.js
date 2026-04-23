@@ -10,9 +10,10 @@ module.exports = {
   pathPrefix,
   siteUrl,
   siteTitle: 'Nguyễn Hồng Tín',
-  siteDescription: 'Personal website of Nguyễn Hồng Tín',
+  siteDescription: 'Nguyễn Hồng Tín — Backend Developer & AI Engineer from Ho Chi Minh City. Specializing in Python, FastAPI, LangChain, LLM, and RAG systems. Building reliable APIs and AI-powered products.',
   author: 'Nguyễn Hồng Tín',
-  postsForArchivePage: 3, // TODO
+  profileImage: '/hongtin2104.png',
+  titleTemplate: 'Nguyễn Hồng Tín | Backend Developer & AI Engineer',
   defaultLanguage: 'en',
   disqusScript: process.env.DISQUS_SCRIPT || '',
   pages: {
@@ -26,7 +27,6 @@ module.exports = {
     twitter: '',
     instagram: '',
     globe: siteUrl,
-    rss: '/rss.xml',
     tiktok: '',
     linkedin: 'https://www.linkedin.com/in/tin-hong-nguyen-0b442029b/',
   },

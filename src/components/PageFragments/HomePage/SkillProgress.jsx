@@ -4,7 +4,7 @@ import style from './skillprogress.module.less';
 
 const SkillsProgress = () => (
   <div>
-    <h1 className="titleSeparate">Skills Progress</h1>
+    <h2 className="titleSeparate">Skills Progress</h2>
     <div className={style.statsContainer}>
       <Row gutter={[16, 16]} justify="center">
         <Col xs={24} sm={12} md={12} lg={12}>

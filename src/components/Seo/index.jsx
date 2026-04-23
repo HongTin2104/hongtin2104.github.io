@@ -27,7 +27,6 @@ function SEO({
   keywords,
   contentType,
   imageUrl,
-  translations,
   meta,
 }) {
   return (
@@ -45,15 +44,60 @@ function SEO({
           Config.pathPrefix,
           path,
         );
+        const profileImageUrl = `${Config.siteUrl}${Config.profileImage}`;
         const metaImageUrl = Utils.resolveUrl(
           Config.siteUrl,
           imageUrl || data.file.childImageSharp.fixed.src,
         );
 
+        const personSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: Config.author,
+          alternateName: 'Nguyen Hong Tin',
+          url: Config.siteUrl,
+          jobTitle: 'Backend Developer',
+          image: profileImageUrl,
+          sameAs: [
+            Config.social.github,
+            Config.social.linkedin,
+            Config.social.facebook,
+          ].filter(Boolean),
+          description: description || Config.siteDescription,
+          knowsAbout: ['Python', 'FastAPI', 'LangChain', 'LLM', 'RAG', 'Backend Development', 'AI Engineering'],
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Ho Chi Minh City',
+            addressCountry: 'VN',
+          },
+        };
+
+        const websiteSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: Config.siteTitle,
+          url: Config.siteUrl,
+          description: Config.siteDescription,
+          author: {
+            '@type': 'Person',
+            name: Config.author,
+            url: Config.siteUrl,
+          },
+        };
+
+        const schema = [];
+        if (path === '/') {
+          schema.push(personSchema);
+          schema.push(websiteSchema);
+        }
+
         return (
           <Helmet
+            htmlAttributes={{
+              lang: lang || 'vi',
+            }}
             title={title} // Page title
-            titleTemplate={`%s | ${Config.siteTitle}`}
+            titleTemplate={path === '/' ? '%s' : `%s | ${Config.siteTitle}`}
             meta={
               [
                 {
@@ -91,7 +135,7 @@ function SEO({
                 },
                 {
                   property: 'og:locale',
-                  content: lang || 'en_US',
+                  content: lang || 'vi_VN',
                 },
                 /* Twitter card */
                 {
@@ -131,22 +175,14 @@ function SEO({
                 rel: 'canonical',
                 href: pageUrl,
               }, // Canonical url
-            ]
-              // Translated versions of page
-              .concat(
-                translations
-                  ? translations.map((obj) => ({
-                    rel: 'alternate',
-                    hreflang: obj.hreflang,
-                    href: Utils.resolvePageUrl(
-                      Config.siteUrl,
-                      Config.pathPrefix,
-                      obj.path,
-                    ),
-                  }))
-                  : [],
-              )}
-          />
+            ]}
+          >
+            {schema.length > 0 && (
+              <script type="application/ld+json">
+                {JSON.stringify(schema)}
+              </script>
+            )}
+          </Helmet>
         );
       }}
     />
@@ -161,12 +197,6 @@ SEO.propTypes = {
   contentType: PropTypes.oneOf(['article', 'website']),
   imageUrl: PropTypes.string,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  translations: PropTypes.arrayOf(
-    PropTypes.shape({
-      hreflang: PropTypes.string.isRequired,
-      path: PropTypes.string.isRequired,
-    }),
-  ),
   meta: PropTypes.arrayOf(
     PropTypes.shape({
       property: PropTypes.string.isRequired,
@@ -176,11 +206,10 @@ SEO.propTypes = {
 };
 
 SEO.defaultProps = {
-  lang: 'en_US',
+  lang: 'vi',
   contentType: 'website',
   imageUrl: null,
   keywords: [],
-  translations: [],
   meta: [],
 };
 

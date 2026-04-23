@@ -28,14 +28,20 @@ module.exports = [
     },
   },
   {
-    resolve: 'gatsby-plugin-i18n',
+    resolve: 'gatsby-plugin-sitemap',
     options: {
-      langKeyDefault: config.defaultLanguage,
-      useLangKeyLayout: false,
+      output: '/sitemap',
+      excludes: ['/404', '/404.html'],
     },
   },
-  'gatsby-plugin-sitemap',
-  'gatsby-plugin-robots-txt',
+  {
+    resolve: 'gatsby-plugin-robots-txt',
+    options: {
+      host: config.siteUrl,
+      sitemap: `${config.siteUrl}/sitemap/sitemap-index.xml`,
+      policy: [{ userAgent: '*', allow: '/' }],
+    },
+  },
   {
     resolve: 'gatsby-plugin-antd',
     options: {
